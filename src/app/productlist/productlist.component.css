@@ -1,0 +1,51 @@
+.mattool2{
+    background-color: #3f51b5;
+    margin-top: 20px;
+}
+h2{
+    font-size:25px;
+    color: white;  
+    margin-left: 15px;
+ }
+
+.container{
+    width:95%;
+    height:461px;
+}
+.columncontainer{
+    width: 85%;
+    height:25px;
+}
+.columnname{
+    color: #3f51b5;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.columnvalues{
+    width: 85%;
+    height:380px;
+}
+
+.Properties{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tile{
+ 
+    color: #646464;
+}
+
+.example-viewport {
+    height: 380px;
+    width: 100%;
+    /* border: 3px solid #3f51b5; */
+  }
+  
+  .deltspan{
+      font-size: 13px;
+  }
+  .example-item {
+    height: 50px;
+  }

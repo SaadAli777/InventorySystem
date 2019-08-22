@@ -1,0 +1,34 @@
+
+<mat-toolbar class="mattool2"><h2> Edit Product</h2></mat-toolbar>
+<mat-card class="container">
+        <form class="example-form" #productForm ="ngForm"  >
+              
+              
+                <!-- Product Name -->
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Product Name" name="name"   [(ngModel)]="pro.productName"  required>
+                </mat-form-field>
+              <br>
+               <!-- Product Quantity -->
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Quantity" name="quantity"  [(ngModel)]="pro.productQuantity"  required>
+                </mat-form-field>
+               <br>
+                <!-- Product Price -->
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Purchase Price" name="pprice"  [(ngModel)]="pro.purchasePrice"  required>
+                </mat-form-field>
+               <br>
+               <!-- Sale Price -->
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Sale Price" name="sprice"   [(ngModel)]="pro.salePrice"  required>
+                </mat-form-field>
+             
+                <mat-grid-list cols="2" rowHeight="50">
+                    <mat-grid-tile class="tile"><a mat-list-item routerLink="/Productlist"><button type="submit" mat-raised-button color="primary" (click)="onUpdate(); mvproduct.productId='';mvproduct.productName='';mvproduct.productQuantity='';mvproduct.purchasePrice='';mvproduct.salePrice=''"><span class="span1">Update</span></button></a></mat-grid-tile>
+                        <mat-grid-tile class="tile"> <a mat-list-item routerLink="/Productlist"><button id="btn2" mat-raised-button ><span class="span1">Cancel</span></button></a></mat-grid-tile>
+                    </mat-grid-list>
+            
+            </form>
+</mat-card>
+<!--  -->
