@@ -1,0 +1,39 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport 
+    [mode]="(isHandset$ | async) ? 'side' : 'push'"
+    [opened]="(isHandset$ | async) === true">
+    <div class="div1">
+      <!-- <h3>Inventory System Menu</h3> -->
+    <img id="logo" src="./assets/logo1.png" alt="logo">
+    </div>
+
+    <!-- Sidenav Links -->
+      <mat-nav-list>
+        <a mat-list-item routerLink="" routerLinkActive="active"> <mat-icon  aria-label="Example home icon">dashboard</mat-icon>Dashboard</a> 
+        <a mat-list-item routerLink="/Addpage" routerLinkActive="active"><mat-icon  aria-label="Example home icon">file_copy</mat-icon>Add Product</a>
+        <a mat-list-item routerLink="/Productlist"><mat-icon  aria-label="Example home icon">storage</mat-icon>Product List</a>
+        <a mat-list-item routerLink="/Sale"><mat-icon  aria-label="Example home icon">attach_money</mat-icon>Sale</a>
+        <a mat-list-item href="#"><mat-icon  aria-label="Example home icon">account_circle</mat-icon>about Us</a>
+   
+      </mat-nav-list>
+      <!--  Sidenav Links end     -->
+     </mat-sidenav>
+
+<mat-sidenav-content class="mat-drawer-content"  >
+  <mat-toolbar color="primary" >
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button  (click)="drawer.toggle()" >
+      <mat-icon  aria-label="Example home icon">menu</mat-icon>
+    </button> 
+ 
+      <span id="BS">Inventory System</span>
+      <!-- AbgGroup icon -->
+      
+     <!-- AbgGroup icon -->
+  </mat-toolbar>
+ 
+  <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
+

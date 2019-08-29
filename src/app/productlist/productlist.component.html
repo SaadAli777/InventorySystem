@@ -1,0 +1,35 @@
+<mat-toolbar class="mattool2"><h2>List of Products</h2></mat-toolbar>
+
+<mat-card class="container">
+    <mat-card class="columncontainer">
+        <mat-grid-list cols="8" rowHeight="35">
+            <mat-grid-tile><span class="columnname">Product ID</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname">Product Name</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname"> Quantity</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname"> Sold Product</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname">Remaining</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname">Profit</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname">Delete</span></mat-grid-tile>
+                <mat-grid-tile><span class="columnname">Edit</span></mat-grid-tile>
+              </mat-grid-list>
+     </mat-card>
+    
+     <mat-card class="columnvalues">
+            <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+                <mat-grid-list cols="8" rowHeight="50" *ngFor="let list of listProducts">
+                    <mat-grid-tile class="tile"><span class="Properties">{{list.productId}}</span></mat-grid-tile>
+                        <mat-grid-tile class="tile"><span class="Properties">{{ list.productName}}</span></mat-grid-tile>
+                        <mat-grid-tile class="tile"><span class="Properties">{{ list.productQuantity}} </span></mat-grid-tile>
+                        <mat-grid-tile class="tile"><span class="Properties"> {{ list.sold}}</span></mat-grid-tile>
+                        <mat-grid-tile class="tile"><span class="Properties">{{ list.remaining}}</span></mat-grid-tile>
+                        <mat-grid-tile class="tile"><span class="Properties">{{ list.profit}}</span></mat-grid-tile>    
+                        <mat-grid-tile class="tile"><button mat-mini-fab color="warn" (click)="Delete(list);"><mat-icon  aria-label="Example home icon">delete</mat-icon></button></mat-grid-tile> 
+                        <mat-grid-tile class="tile"><button mat-mini-fab color="primary" (click)="update(list)"><mat-icon  aria-label="Example home icon">edit</mat-icon></button></mat-grid-tile>       
+                    </mat-grid-list>
+                </cdk-virtual-scroll-viewport>
+         </mat-card>
+        
+</mat-card>
+
+
+

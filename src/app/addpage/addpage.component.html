@@ -1,0 +1,57 @@
+
+
+<mat-toolbar class="mattool2"><h2> Add New Product</h2></mat-toolbar>
+<mat-card class="container">
+
+        <form class="example-form" #controlForm="ngForm">    
+
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Product ID" type="text" [(ngModel)] = "mvproduct.productId" [formControl]="idControl" >
+                </mat-form-field>  
+                <mat-error *ngIf="idControl.touched && idControl.hasError('required')">Id is required</mat-error>
+
+                <br>
+             
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Product Name" type="text"  [(ngModel)] = "mvproduct.productName" [formControl]="nameControl">
+                </mat-form-field>
+                <mat-error *ngIf="nameControl.touched && nameControl.hasError('required')">Product Name is required</mat-error>
+              <br>
+              
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Quantity"  [(ngModel)] = "mvproduct.productQuantity" [formControl]="quantityControl">
+                        <mat-error *ngIf="quantityControl.touched && quantityControl.hasError('required')">Quantity is required</mat-error>
+                </mat-form-field>
+               <br>
+           
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Purchase Price"  [(ngModel)] = "mvproduct.purchasePrice" [formControl]="pControl">
+                        <mat-error *ngIf="pControl.touched && pControl.hasError('required')">Purchase price is required</mat-error>
+                </mat-form-field>
+               <br>
+              
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Sale Price"  [(ngModel)] = "mvproduct.salePrice" [formControl]="sControl" >
+                        <mat-error *ngIf="sControl.touched && sControl.hasError('required')">Sale price is required</mat-error>
+                </mat-form-field>
+                 <br><br>
+
+                 <a mat-list-item routerLink="/Addpage" ><button type="submit" mat-raised-button color="primary" (click)="onSubmit();snakbar(mvproduct.productName);" [disabled]="idControl.invalid || nameControl.invalid || quantityControl.invalid" ><span class="span1">Add</span></button></a>
+              </form>
+              
+              
+</mat-card>
+
+
+
+
+
+
+
+       <!-- blow form tag -->
+        <!-- {{productForm.value | json}}
+                <hr/>
+                {{mvproduct | json}} -->
+
+
+                

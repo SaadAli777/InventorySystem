@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+
+.sidenav-container {
+    height: 100%;
+    position: sticky;
+  }
+  
+  .sidenav {
+    width: 220px;
+    background-color: #f5f5f5;
+    
+  }
+  
+  .mat-toolbar .mat-primary {
+    position: sticky;
+    top: 0;
+  }
+  
+  #BS{
+    color:white;
+  }
+  #fscreen{
+    margin-left:5px;
+    margin-right:10px;
+  }
+  
+  #logo{
+    width:215px;
+    height: 80px;
+    /* background-color: #1f2a3e; */
+  }
+  .Dboard{
+    height:40px;
+  }
+  
+  .mat-drawer-content {
+    position: relative;
+    z-index: 3;
+    display: block;
+    height: 100%;
+  }
+  .AbgGroup{
+       
+      margin-left: 1000px;
+  }
+  
