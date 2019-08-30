@@ -34,7 +34,7 @@ import { FormsModule, FormGroup }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +44,6 @@ import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component'
     SaleComponent,
     DashboardComponent,
     EditproductComponent,
-    ConfirmdialogComponent
   ],
   imports: [
     BrowserModule,

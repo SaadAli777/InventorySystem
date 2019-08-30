@@ -3,11 +3,6 @@ import { ProductServiceService } from '../services/product-service.service';
 import { MVProduct } from 'src/MVProduct';
 import {MatDialogModule,MatDialogConfig, MatDialog} from '@angular/material/dialog';
 import { EditproductComponent } from '../editproduct/editproduct.component';
-import { ConfirmdialogComponent } from '../confirmdialog/confirmdialog.component';
-
-
-
-
 
 
 
